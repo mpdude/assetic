@@ -253,7 +253,7 @@ class AssetFactory
 
         $mtime = null;
 
-        if ($asset instanceof AssetCollection) {
+        if ($asset instanceof AssetCollectionInterface) {
             foreach ($asset as $leaf) {
                 $mtime = max($mtime, $this->getLastModified($leaf));
             }
